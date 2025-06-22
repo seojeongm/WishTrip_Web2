@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="w-60 h-screen bg-white border-r shadow-sm fixed top-0 left-0 z-10">
+    <aside className="w-[255px] h-screen bg-white shadow-sm fixed top-0 left-0 z-10">
       <div className="p-6">
         <img src={logo} alt="WishTrip Logo" className="w-32 mx-auto" />
       </div>

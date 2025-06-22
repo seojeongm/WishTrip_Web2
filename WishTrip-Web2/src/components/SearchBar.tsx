@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import search from '../assets/search.png'; // 이미지 import
 
 export default function SearchBar({ onSearch }: { onSearch: (place: string) => void }) {
   const [query, setQuery] = useState('');
@@ -12,20 +13,21 @@ export default function SearchBar({ onSearch }: { onSearch: (place: string) => v
 
   return (
     <form onSubmit={handleSearch} className="flex w-full max-w-2xl mb-4">
-      <input
-        type="text"
-        placeholder="로마, 이탈리아"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="flex-grow rounded-full px-6 py-3 border border-gray-300 focus:outline-none text-sm placeholder-gray-400 shadow-sm"
-      />
-      <button
-        type="submit"
-        className="ml-2 px-6 py-3 bg-blue-900 text-white rounded-full text-sm font-semibold hover:brightness-110 transition"
-      >
-        여행지 검색하기
-      </button>
+      <div className="relative w-full">
+        {/* ✅ 이미지 import한 변수를 src로 사용 */}
+        <img
+          src={search}
+          alt="Search"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 opacity-60"
+        />
+        <input
+          type="text"
+          placeholder="로마, 이탈리아"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-300 text-sm shadow-sm placeholder-gray-400 focus:outline-none"
+        />
+      </div>
     </form>
   );
 }
-

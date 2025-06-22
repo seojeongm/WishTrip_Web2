@@ -7,7 +7,7 @@ interface Props {
   onClose: () => void;
 }
 
-const AddWishModal: React.FC<Props> = ({ placeName, onClose }) => {
+const AddWishModal0: React.FC<Props> = ({ placeName, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
       <div className="bg-white p-6 rounded-xl shadow-xl w-80">

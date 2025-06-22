@@ -34,7 +34,7 @@ const ThemeSelector = () => {
         여행하고 싶은 모든 장소를 체크해보세요.
       </p>
 
-      <button className="flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
+      <button className="cursor-pointer flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
         내 여행지 목록 보기
         <svg
           width="12"

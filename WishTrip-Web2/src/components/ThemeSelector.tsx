@@ -1,5 +1,6 @@
-import parisImage from "../assets/ThemeSelector/paris_eiffel.png"
-import tokyoImage from "../assets/ThemeSelector/tokyo_skytree.png"; 
+import { useNavigate } from "react-router-dom";
+import parisImage from "../assets/ThemeSelector/paris_eiffel.png";
+import tokyoImage from "../assets/ThemeSelector/tokyo_skytree.png";
 import newyorkImage from "../assets/ThemeSelector/newyork_timessquare.png";
 import hawaiiImage from "../assets/ThemeSelector/hawaii_beach.png";
 
@@ -27,14 +28,25 @@ const themes = [
 ];
 
 const ThemeSelector = () => {
+  const navigate = useNavigate();
+
+  const handleViewList = () => {
+    navigate("/listandmemo/listdetailpage");
+  };
+
   return (
     <section className="w-full w-[1216px] mx-auto py-16 px-4 text-center bg-[#f8fbff]">
-      <h2 className="text-2xl md:text-3xl font-bold mb-2">여행하고 싶은 리스트</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-2">
+        여행하고 싶은 리스트
+      </h2>
       <p className="text-sm text-gray-600 mb-6">
         여행하고 싶은 모든 장소를 체크해보세요.
       </p>
 
-      <button className="cursor-pointer flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
+      <button
+        onClick={handleViewList}
+        className="cursor-pointer flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold"
+      >
         내 여행지 목록 보기
         <svg
           width="12"
@@ -64,7 +76,9 @@ const ThemeSelector = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-sm font-semibold text-gray-800">{theme.city}</div>
+            <div className="text-sm font-semibold text-gray-800">
+              {theme.city}
+            </div>
             <div className="text-xs text-gray-500">{theme.theme}</div>
           </div>
         ))}

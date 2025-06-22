@@ -18,8 +18,8 @@ const Sidebar: React.FC = () => {
   const navItems: NavItem[] = [
     { name: '홈', path: '/', icon: homeIcon },
     { name: '지도', path: '/map', icon: mapIcon },
-    { name: '기록', path: '/record', icon: recordIcon },
-    { name: '설정', path: '/settings', icon: settingIcon },
+    { name: '기록', path: '/listandmemo', icon: recordIcon },
+    { name: '설정', path: '/setting', icon: settingIcon },
   ];
 
   return (

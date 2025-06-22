@@ -25,3 +25,4 @@ const AddWishModal0: React.FC<Props> = ({ placeName, onClose }) => {
     </div>
   );
 }
+export default AddWishModal0;

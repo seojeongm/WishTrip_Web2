@@ -1,10 +1,12 @@
 // pages/MapPage.tsx
 import React, { useState } from 'react';
 import AddWishButton from '../components/AddWishButton';
-import AddWishModal from '../components/AddWishModal';
+
 import MapViewer from '../components/MapViewer';
-import SearchBar from '../components/Searchbar';
+
 import Footer from '../components/Footer';
+import SearchBar from '../components/Searchbar';
+import AddWishModal0 from '../components/AddWishModal0';
 
 
 const MapPage = () => {
@@ -43,7 +45,7 @@ const MapPage = () => {
 
       {/* 모달 */}
       {modalOpen && (
-        <AddWishModal placeName={selectedPlace} onClose={handleCloseModal} />
+        <AddWishModal0 placeName={selectedPlace} onClose={handleCloseModal} />
       )}
 
       

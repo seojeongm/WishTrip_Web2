@@ -1,14 +1,23 @@
-// 여행 메모 추가 요청 DTO
-export interface RequestAddMemoDto {
-  note: string;
-  image?: File | null;
-}
+import { axiosInstance } from "./axiosInstance";
+import {
+  RequestAddMemoDto,
+  ResponseAddMemoDto,
+  ResponseGetMemoListDto,
+} from "../types/trip";
 
-// 여행 메모 항목 응답 DTO
-export interface TripMemoItem {
-  id: number;
-  locationId: number;
-  note: string;
-  imageUrl?: string;
-  createdAt: string;
-}
+// 메모 추가 (POST /trip/memo/{locationId})
+export const addTripMemo = (
+  locationId: number,
+  body: RequestAddMemoDto
+): Promise<ResponseAddMemoDto> => {
+  return axiosInstance.post(`/trip/memo/${locationId}`, body);
+};
+
+// 여행 기록 리스트 조회 (GET /trip/memo/list?page=n)
+export const getTripMemoList = (
+  page: number
+): Promise<ResponseGetMemoListDto> => {
+  return axiosInstance.get(`/trip/memo/list`, {
+    params: { page },
+  });
+};

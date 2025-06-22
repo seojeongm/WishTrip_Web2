@@ -20,7 +20,7 @@ const AddWishModal0: React.FC<Props> = ({ placeName, onClose }) => {
         >
           닫기
         </button>
-)
+
       </div>
     </div>
   );

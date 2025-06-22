@@ -1,4 +1,3 @@
-// components/AddWishButton.tsx
 import React from 'react';
 
 interface Props {
@@ -8,10 +7,11 @@ interface Props {
 const AddWishButton: React.FC<Props> = ({ onClick }) => {
   return (
     <button
-      className="absolute top-4 right-4 bg-blue-700 text-white px-4 py-2 rounded-xl shadow-lg hover:bg-blue-800 z-40 flex items-center gap-2 whitespace-nowrap"
       onClick={onClick}
+      className="bg-blue-900 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:brightness-110 transition flex items-center gap-2"
     >
-      <span className="text-xl font-bold">+</span> 여행지 목록에 추가
+      <span className="text-lg font-bold">＋</span>
+      여행지 목록에 추가
     </button>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './components/Sidebar';
-import MapPage from './pages/MapPage';
+import MapPage from "./pages/MapPage";
 import HomePage from "./pages/HomePage";
 import SettingPage from "./pages/SettingPage";
 import ListAndMemo from "./pages/ListAndMemo";

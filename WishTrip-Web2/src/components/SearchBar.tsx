@@ -11,20 +11,21 @@ export default function SearchBar({ onSearch }: { onSearch: (place: string) => v
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex items-center mb-4">
+    <form onSubmit={handleSearch} className="flex w-full max-w-2xl mb-4">
       <input
         type="text"
-        placeholder="도시, 명소 입력"
+        placeholder="로마, 이탈리아"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border border-gray-300 px-4 py-2 w-full rounded-l-md focus:outline-none"
+        className="flex-grow rounded-full px-6 py-3 border border-gray-300 focus:outline-none text-sm placeholder-gray-400 shadow-sm"
       />
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700"
+        className="ml-2 px-6 py-3 bg-blue-900 text-white rounded-full text-sm font-semibold hover:brightness-110 transition"
       >
-        검색
+        여행지 검색하기
       </button>
     </form>
   );
 }
+

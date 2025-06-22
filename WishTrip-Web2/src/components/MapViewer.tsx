@@ -12,31 +12,30 @@ interface MapViewerProps {
 
 export default function MapViewer({ searchPlace }: MapViewerProps) {
   const [center, setCenter] = useState<{ lat: number; lng: number } | null>(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
-    const geocode = async () => {
-      const geocoder = new window.google.maps.Geocoder();
-      geocoder.geocode({ address: searchPlace }, (results, status) => {
-        if (status === 'OK' && results && results[0]) {
-          const location = results[0].geometry.location;
-          setCenter({
-            lat: location.lat(),
-            lng: location.lng(),
-          });
-        } else {
-          console.error('Geocode failed:', status);
-        }
-      });
-    };
+    if (!mapLoaded || !searchPlace) return;
 
-    // API 로드 후 실행
-    if (window.google && window.google.maps) {
-      geocode();
-    }
-  }, [searchPlace]);
+    const geocoder = new window.google.maps.Geocoder();
+    geocoder.geocode({ address: searchPlace }, (results, status) => {
+      if (status === 'OK' && results && results[0]) {
+        const location = results[0].geometry.location;
+        setCenter({
+          lat: location.lat(),
+          lng: location.lng(),
+        });
+      } else {
+        console.error('Geocode 실패:', status);
+      }
+    });
+  }, [searchPlace, mapLoaded]);
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyCreRDaKk2VFqeeL0RJbg5GicivaV3XPpE">
+    <LoadScript
+      googleMapsApiKey="AIzaSyCreRDaKk2VFqeeL0RJbg5GicivaV3XPpE"
+      onLoad={() => setMapLoaded(true)}
+    >
       {center && (
         <GoogleMap
           mapContainerStyle={containerStyle}

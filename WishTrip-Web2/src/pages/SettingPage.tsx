@@ -1,4 +1,6 @@
 import { useState } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const SettingPage = () => {
   const [showResetModal, setShowResetModal] = useState(false);
@@ -12,23 +14,31 @@ const SettingPage = () => {
   const handleCloseFinished = () => setShowFinishedModal(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-8 pt-16 pb-40 font-sans relative">
-      {/* 설정 카드 */}
-      <div className="bg-white shadow-md rounded-2xl p-10 ml-[260px] w-[calc(100%-260px)] max-w-none">
-        <h2 className="text-[24px] font-bold text-gray-900 mb-1">설정</h2>
-        <p className="text-sm text-[#1C2E6E] mb-6">나만의 위시트립 설정</p>
+    <>
+      {/* 내브바는 상단 고정 */}
+      <NavBar />
 
-        <button
-          onClick={handleResetClick}
-          className="w-full bg-[#1C2E6E] text-white text-base font-semibold py-3 rounded-md hover:bg-[#1C2E6E]/90 transition"
-        >
-          내 위시트립 초기화
-        </button>
+      {/* 메인 콘텐츠 */}
+      <main className="min-h-screen bg-gray-50 px-8 mt-20 pb-40 font-sans relative">
+        <div className="bg-white shadow-md rounded-2xl p-10 ml-[260px] w-[calc(100%-260px)] max-w-none">
+          <h2 className="text-[24px] font-bold text-gray-900 mb-1">설정</h2>
+          <p className="text-sm text-[#1C2E6E] mb-6">나만의 위시트립 설정</p>
 
-        <p className="text-xs text-[#1C2E6E] mt-3">
-          초기화 후 되돌릴 수 없습니다.
-        </p>
-      </div>
+          <button
+            onClick={handleResetClick}
+            className="w-full bg-[#1C2E6E] text-white text-base font-semibold py-3 rounded-md hover:bg-[#1C2E6E]/90 transition"
+          >
+            내 위시트립 초기화
+          </button>
+
+          <p className="text-xs text-[#1C2E6E] mt-3">
+            초기화 후 되돌릴 수 없습니다.
+          </p>
+        </div>
+      </main>
+
+      {/* ✅ Footer는 항상 보이게 여기 위치 */}
+      <Footer />
 
       {/* Reset 모달 */}
       {showResetModal && (
@@ -73,7 +83,7 @@ const SettingPage = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

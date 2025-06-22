@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import AddWishModal from "../components/AddWishModal";
 import AddWishModal2 from "../components/AddWishModal2";
-
 import checkIcon from "../assets/check-circle.svg";
 import memoAddIcon from "../assets/memo-add.svg";
 import memoViewIcon from "../assets/memo-view.svg";

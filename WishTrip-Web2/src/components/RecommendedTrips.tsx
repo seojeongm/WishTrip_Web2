@@ -25,8 +25,7 @@ const trips = [
 
 const RecommendedTrips = () => {
   return (
-<section className="w-full max-w-[1216px] mx-auto px-4 md:px-8 py-12 bg-[#F8F9FB]">
-
+    <section className="w-full py-12 bg-[#F8F9FB]">
       {/* 제목 */}
       <h2 className="text-center text-[32px] font-bold leading-[48px] tracking-[-0.01em] mb-8">
         추천 여행지
@@ -55,7 +54,9 @@ const RecommendedTrips = () => {
             {/* 텍스트 영역 */}
             <div className="flex flex-col px-[16px] py-[12px] gap-[4px] text-left">
               <p className="text-[12px] text-gray-500">{trip.city}</p>
-            <h3 className="text-[14px] font-bold text-gray-900">{trip.country}</h3>
+              <h3 className="text-[14px] font-bold text-gray-900">
+                {trip.country}
+              </h3>
             </div>
           </div>
         ))}

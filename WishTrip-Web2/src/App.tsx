@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from './components/Sidebar';
-import MapPage from './pages/MapPage';
+import Sidebar from "./components/Sidebar";
+import MapPage from "./pages/MapPage";
 import HomePage from "./pages/HomePage";
 import SettingPage from "./pages/SettingPage";
 import ListAndMemo from "./pages/ListAndMemo";
+import ListDetailPage from "./pages/ListDetailPage";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
             <Route path="/map" element={<MapPage />} />
             <Route path="/setting" element={<SettingPage />} />
             <Route path="/listandmemo" element={<ListAndMemo />} />
+            <Route
+              path="/listandmemo/listdetailpage"
+              element={<ListDetailPage />}
+            />
           </Routes>
         </main>
       </div>

@@ -13,8 +13,7 @@ const SettingPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 px-8 pt-16 pb-40 font-sans relative">
-      {/* 설정 카드 */}
-      <div className="bg-white shadow-md rounded-2xl p-10 ml-[260px] w-[calc(100%-260px)] max-w-none">
+      <div className="bg-white shadow-md rounded-2xl p-10 mx-auto w-full max-w-xl">
         <h2 className="text-[24px] font-bold text-gray-900 mb-1">설정</h2>
         <p className="text-sm text-[#1C2E6E] mb-6">나만의 위시트립 설정</p>
 

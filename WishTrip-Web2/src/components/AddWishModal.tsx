@@ -30,7 +30,7 @@ const AddWishModal = ({ onClose, onSubmit }: AddWishModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-10 backdrop-blur-sm z-50">
       <div className="bg-white rounded-xl p-8 w-[500px]">
         <h2 className="text-xl font-bold mb-6">새로운 메모 추가하기</h2>
 

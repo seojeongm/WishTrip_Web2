@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AddWishModal from "../components/AddWishModal";
 import AddWishModal2 from "../components/AddWishModal2";
 import checkIcon from "../assets/check-circle.svg";
@@ -14,6 +15,7 @@ interface Memo {
 }
 
 const ListAndMemo = () => {
+  const navigate = useNavigate();
   const [memos, setMemos] = useState<Memo[]>([]);
   const [lastAddedCity, setLastAddedCity] = useState("");
   const [showAddModal, setShowAddModal] = useState(false);
@@ -51,7 +53,10 @@ const ListAndMemo = () => {
         <p className="text-[14px] text-gray-500 mb-4">
           여행할 도시 및 완료한 여행지
         </p>
-        <button className="bg-blue-900 text-white px-4 py-2 rounded mb-4 text-sm">
+        <button
+          className="bg-blue-900 text-white px-4 py-2 rounded mb-4 text-sm"
+          onClick={() => navigate("/listandmemo/listdetailpage")}
+        >
           여행지 더보기 →
         </button>
         <ul className="space-y-3">
@@ -88,6 +93,11 @@ const ListAndMemo = () => {
                   src={memo.note ? memoViewIcon : memoAddIcon}
                   alt="memo-icon"
                   className="w-5 h-5 cursor-pointer"
+                  onClick={() =>
+                    navigate("/listandmemo/listdetailpage", {
+                      state: { city: memo.city },
+                    })
+                  }
                 />
               </div>
             </li>

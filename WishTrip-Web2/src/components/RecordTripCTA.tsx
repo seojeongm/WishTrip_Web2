@@ -8,9 +8,25 @@ const RecordTripCTA = () => {
       <p className="text-gray-600 text-sm md:text-base mb-8">
         당신의 여행을 글로 남기고, 다른 사람과 공유해보세요.
       </p>
-      <button className="bg-blue-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition">
-        기록 남기러 가기 →
-      </button>
+<button className="cursor-pointer flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
+  기록 남기러 가기
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4"
+  >
+    <path
+      d="M7 17L17 7M17 7H9M17 7V15"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</button>
     </section>
   );
 };

@@ -28,13 +28,13 @@ const themes = [
 
 const ThemeSelector = () => {
   return (
-    <section className="w-full max-w-[1216px] mx-auto py-16 px-4 text-center bg-[#f8fbff]">
+    <section className="w-full w-[1216px] mx-auto py-16 px-4 text-center bg-[#f8fbff]">
       <h2 className="text-2xl md:text-3xl font-bold mb-2">여행하고 싶은 리스트</h2>
       <p className="text-sm text-gray-600 mb-6">
         여행하고 싶은 모든 장소를 체크해보세요.
       </p>
 
-      <button className="flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
+      <button className="cursor-pointer flex mx-auto items-center gap-2 text-white bg-blue-900 hover:bg-blue-800 px-6 py-4 rounded-md font-semibold">
         내 여행지 목록 보기
         <svg
           width="12"

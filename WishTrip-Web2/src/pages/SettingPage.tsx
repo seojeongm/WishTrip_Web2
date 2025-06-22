@@ -17,7 +17,7 @@ const SettingPage = () => {
     <>
       <NavBar />
 
-      <main className="min-h-screen bg-gray-50 px-8 mt-20 pb-40 font-sans relative">
+      <main className="min-h-screen bg-gray-50 px-0 pt-20 pb-40 font-sans relative">
         <div className="bg-white shadow-md rounded-2xl p-10 ml-[260px] w-[calc(100%-260px)] max-w-none">
           <h2 className="text-[24px] font-bold text-gray-900 mb-1">설정</h2>
           <p className="text-sm text-[#1C2E6E] mb-6">나만의 위시트립 설정</p>

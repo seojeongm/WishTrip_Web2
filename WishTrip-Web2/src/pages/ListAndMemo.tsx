@@ -51,8 +51,8 @@ const ListAndMemo = () => {
     <>
       <NavBar />
 
-      <main className="min-h-screen bg-gray-50 px-8 mt-20 pb-40 font-sans relative">
-        <div className="ml-[260px] w-[calc(100%-260px)] space-y-10">
+      <main className="min-h-screen bg-gray-50 px-0 pt-20 pb-40 font-sans relative">
+        <div className="ml-[260px] w-[calc(100%-260px)] space-y-10 px-8">
           {/* 여행지 목록 */}
           <section className="bg-white p-6 rounded-xl shadow">
             <h2 className="text-[20px] font-bold mb-1">여행지 목록</h2>
